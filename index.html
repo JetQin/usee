@@ -1,0 +1,72 @@
+---
+layout: default
+title: JetQin
+---
+
+<ul class="timeline">
+
+{% for post in paginator.posts %}
+
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% if thecycle == 'odd' %}
+     <li> {{ post_count }}
+     <div class="timeline-badge info"><i class="glyphicon glyphicon-chevron-left"></i></div>
+    {% else %}
+     <li class="timeline-inverted">
+     <div class="timeline-badge info"><i class="glyphicon glyphicon-chevron-right"></i></div>
+    {% endif %}
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">{{ post.title }}</h4>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ post.date }} </small></p>
+      </div>
+      <div class="timeline-body">
+        <p>{{ post.content }}</p>
+        <p> 
+          <a class="button glow button-rounded button-flat-primary pull-right" href="{{ site.baseurl }}{{ post.url }}">下载</a>
+        </p>
+      </div>
+    </div>
+  </li>  
+{% endfor %}
+
+</ul>
+
+<div id="post-pagination" class="pagination">
+ <ul class="pagination">
+  {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <li><a href="{{ site.baseurl }}/">&laquo;</a></li>
+      {% else %}
+        <li><a href="{{ paginator.previous_page_path | prepend : site.baseurl }}">&laquo;</a></li>
+      {% endif %}
+  {% else %}
+     <li class="disabled"><a href="#">&laquo;</a></li>
+  {% endif %}
+
+  
+    <li class="page">
+      {% if paginator.page == 1 %}
+        <li class="active"><a href="">1</a></li>
+      {% else %}
+        <li><a href="{{ site.baseurl }}/">1</a></li>
+      {% endif %}
+    </li>
+
+    {% for count in (2..paginator.total_pages) %}
+      <li class="page">
+        {% if count == paginator.page %}
+          <span class="current-page">{{ count }}</span>
+        {% else %}
+          <a href="{{ site.baseurl }}/page{{ count }}">{{ count }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path | prepend : site.baseurl }}">&raquo;</a></li>
+  {% else %}
+    <li><a href="#">&raquo;</a></li>
+  {% endif %}
+</ul>
+</div>
