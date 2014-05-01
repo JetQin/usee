@@ -1,6 +1,6 @@
 name: USEE
 markdown: redcarpet
 pygments: true
-baseurl: /imovie
+baseurl: /usee
 paginate: 5
 paginate_path: "/page:num"
