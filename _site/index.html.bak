@@ -20,13 +20,22 @@
     
     <body  >
 
-
-      <div class="container">
-        <div class="page-header">
-            <h1 id="timeline">Bootstrap Timeline</h1>
-            <p>http://www.facebook.com/sergiomandrake</p>
+    <div class="row">
+        <div class="col-lg-12 text-center v-center">
+          <h1>看尽精彩</h1>
+          <br>
+          
+          <form class="col-lg-12">
+            <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
+              <input type="text" class="center-block form-control input-lg" title="Enter you email." placeholder="查找电影">
+              <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">搜索</button></span>
+            </div>
+          </form>
         </div>
-            
+        
+    </div> <!-- /row -->
+    <div class="container">
+        
 
 
 <div id="post-pagination" class="pagination">
