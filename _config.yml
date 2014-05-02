@@ -2,5 +2,6 @@ name: USEE
 markdown: redcarpet
 pygments: true
 baseurl: /usee
+safe: false
 paginate: 5
 paginate_path: "/page:num"
