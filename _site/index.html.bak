@@ -35,7 +35,30 @@
         
     </div> <!-- /row -->
     <div class="container">
-        
+        <div class="row">
+          <div class="col-lg-2">
+              <ul class="list-group">
+                  <li class="list-group-item"><a href="/imovie/">首页</a></li>
+                  
+                  <li class="list-group-item">
+                  <a href="/imovie/categories/jekyll/" title="view all posts">      
+                       jekyll 6</a>
+                  </li>
+                  
+                  <li class="list-group-item">
+                  <a href="/imovie/categories/update/" title="view all posts">      
+                       update 6</a>
+                  </li>
+                  
+                  <li class="list-group-item">
+                  <a href="/imovie/categories/welcome/" title="view all posts">      
+                       welcome 4</a>
+                  </li>
+                  
+              </ul>
+          </div>
+          <div class="col-lg-10">
+            
 
 
 <div id="post-pagination" class="pagination">
@@ -58,6 +81,8 @@
   
 </ul>
 </div>
+          </div>
+        </div>
     </div>
      <!--  <div class="container">
           <hr>
