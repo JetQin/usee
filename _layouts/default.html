@@ -41,7 +41,7 @@
                   <li class="list-group-item"><a href="{{site.baseurl}}/">首页</a></li>
                   {% for category in site.categories %}
                   <li class="list-group-item">
-                  <a href="/categories/{{ category | first }}/" title="view all posts">      
+                  <a href="{{site.baseurl}}/categories/{{ category | first }}/" title="view all posts">      
                        {{ category | first }} {{ category | last | size }}</a>
                   </li>
                   {% endfor %}
